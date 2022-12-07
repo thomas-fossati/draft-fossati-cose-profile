@@ -76,8 +76,8 @@ A COSE profile:
 * MAY define new header attributes
   * if so, it MUST provide their definition in the same document
 * MUST use CDDL {{-cddl}} to fully specify the syntax rules for the profile
-* MUST use the `COSE_profile` header attribute in the protected header
-  * The value of `COSE_profile` MUST be global unique via:
+* MUST use the `cose-profile` header attribute in the protected header
+  * The value of `cose-profile` MUST be global unique via:
     * IANA registry
     * using an OID {{-oid}}, URI {{-uri}} or CRI {{-cri}}
     * using a UUID {{-uuid}}
