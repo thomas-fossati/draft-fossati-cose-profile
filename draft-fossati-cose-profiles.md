@@ -110,7 +110,7 @@ cri = [*any]
 TODO Security
 
 # IANA Considerations
-Actually, it defines a header parameter "COSE_profile" that needs to
+This memo defines a header parameter "cose-profile" that needs to
 be registered in the "COSE Header Parameters" registry.
 
 (Note that parameter names usually don't have programming language
