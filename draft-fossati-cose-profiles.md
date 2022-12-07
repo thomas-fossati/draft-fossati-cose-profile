@@ -55,18 +55,21 @@ TODO Introduction
 
 # Rules
 
-1. MUST NOT change already defined header attributes
-2. MAY define new header attributes
-   a. if so, MUST define them in the same document
-4. MUST use CDDL to fully specify the syntax rules for the profile
-5. MUST use the COSE_profile header attribute in the protected header
-   a. value of COSE_profile MUST be global unique via:
-        - IANA registry
-        - using an oid or [cu]ri
-        - using a uuid
-   b. type of value SHOULD be application appropriate (e.g., constrained node environments)
-5. MAY be tagged in front of COSE tag
-6. SHOULD define its complementary media-type/content-format
+A COSE profile:
+
+* MUST be specified in a document
+* MUST NOT change the syntax or semantics of any already defined header attribute
+* MAY define new header attributes
+  * if so, it MUST provide their definition in the same document
+* MUST use CDDL to fully specify the syntax rules for the profile
+* MUST use the `COSE_profile` header attribute in the protected header
+  * The value of `COSE_profile` MUST be global unique via:
+    * IANA registry
+    * using an OID or URI / CRI
+    * using a UUID
+  * The chosen value SHOULD be appropriate for the intended usage scope (e.g., a small value when used in constrained node environments)
+* MAY define its own COSE tag
+* SHOULD define its complementary media-type and content-format
 
 # Security Considerations
 
