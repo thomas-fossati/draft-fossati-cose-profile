@@ -112,7 +112,7 @@ cri = [*any]
 TODO Security
 
 # IANA Considerations
-This document defines a header parameter "cose profile" that needs to
+This document defines a header parameter "cose-profile" that needs to
 be registered in the "COSE Header Parameters" registry.
 
 --- back
