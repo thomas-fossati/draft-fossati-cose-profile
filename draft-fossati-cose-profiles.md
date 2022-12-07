@@ -82,8 +82,10 @@ A COSE profile:
     * using an OID {{-oid}}, URI {{-uri}} or CRI {{-cri}}
     * using a UUID {{-uuid}}
   * The chosen value SHOULD be appropriate for the intended usage scope (e.g., a small value when used in constrained node environments)
-* MAY define its own CBOR tag
+* MAY define its own CBOR tag[^tag]
 * SHOULD define its complementary media-type and content-format
+
+[^tag]: -- get more specific here (in later iterations)
 
 # COSE profile header parameter
 
@@ -110,11 +112,8 @@ cri = [*any]
 TODO Security
 
 # IANA Considerations
-This memo defines a header parameter "cose-profile" that needs to
+This document defines a header parameter "cose profile" that needs to
 be registered in the "COSE Header Parameters" registry.
-
-(Note that parameter names usually don't have programming language
-lexicals, i.e., no underscores etc.)
 
 --- back
 
