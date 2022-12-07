@@ -110,9 +110,6 @@ cri = [*any]
 TODO Security
 
 # IANA Considerations
-
-This document has no IANA actions.
-
 Actually, it defines a header parameter "COSE_profile" that needs to
 be registered in the "COSE Header Parameters" registry.
 
