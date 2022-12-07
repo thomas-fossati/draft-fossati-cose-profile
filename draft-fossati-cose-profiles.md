@@ -77,8 +77,8 @@ A COSE profile:
   * if so, it MUST provide their definition in the same document
 * MUST use CDDL {{-cddl}} to fully specify the syntax rules for the profile
 * MUST use the `cose-profile` header attribute in the protected header
-  * The value of `cose-profile` MUST be global unique via:
-    * IANA registry
+  * The value of `cose-profile` MUST be globally unique.  Possible choices include:
+    * IANA registry[^tag]
     * using an OID {{-oid}}, URI {{-uri}} or CRI {{-cri}}
     * using a UUID {{-uuid}}
   * The chosen value SHOULD be appropriate for the intended usage scope (e.g., a small value when used in constrained node environments)
