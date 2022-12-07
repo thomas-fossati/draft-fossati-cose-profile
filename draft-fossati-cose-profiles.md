@@ -10,18 +10,18 @@ number:
 date:
 consensus: true
 v: 3
-area: AREA
-workgroup: WG Working Group
+# area: AREA
+# workgroup: WG Working Group
 keyword:
  - COSE
  - profiling
 venue:
-  group: WG
-  type: Working Group
-  mail: WG@example.com
-  arch: https://example.com/WG
-  github: USER/REPO
-  latest: https://example.com/LATEST
+#  group: WG
+#  type: Working Group
+#  mail: WG@example.com
+#  arch: https://example.com/WG
+  github: "thomas-fossati/draft-fossati-cose-profile"
+  latest: "https://thomas-fossati.github.io/draft-fossati-cose-profile/draft-fossati-cose-profiles.html"
 
 author:
  -
