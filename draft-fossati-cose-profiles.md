@@ -34,9 +34,21 @@ author:
     email: henk.birkholz@sit.fraunhofer.de
 
 normative:
+  RFC8610: cddl
+  STD66:
+    -: uri
+    =: RFC3986
+  STD96:
+    -: cose
+    =: RFC9052
+  I-D.ietf-core-href: cri
+  RFC4122: uuid
+  RFC9090: oid
 
 informative:
 
+entity:
+  SELF: "RFCthis"
 
 --- abstract
 
@@ -46,7 +58,7 @@ This document lays a set of rules for how to define COSE profiles.
 
 # Introduction
 
-TODO Introduction
+This document lays a set of rules for how to define COSE profiles.
 
 
 # Conventions and Definitions
@@ -61,12 +73,12 @@ A COSE profile:
 * MUST NOT change the syntax or semantics of any already defined header attribute
 * MAY define new header attributes
   * if so, it MUST provide their definition in the same document
-* MUST use CDDL to fully specify the syntax rules for the profile
+* MUST use CDDL {{-cddl}} to fully specify the syntax rules for the profile
 * MUST use the `COSE_profile` header attribute in the protected header
   * The value of `COSE_profile` MUST be global unique via:
     * IANA registry
-    * using an OID or URI / CRI
-    * using a UUID
+    * using an OID {{-oid}}, URI {{-uri}} or CRI {{-cri}}
+    * using a UUID {{-uuid}}
   * The chosen value SHOULD be appropriate for the intended usage scope (e.g., a small value when used in constrained node environments)
 * MAY define its own COSE tag
 * SHOULD define its complementary media-type and content-format
@@ -75,11 +87,9 @@ A COSE profile:
 
 TODO Security
 
-
 # IANA Considerations
 
 This document has no IANA actions.
-
 
 --- back
 
