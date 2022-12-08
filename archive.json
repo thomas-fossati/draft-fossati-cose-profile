@@ -1,0 +1,364 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2022-12-08T00:47:23.382488+00:00",
+  "repo": "thomas-fossati/draft-fossati-cose-profile",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [
+    {
+      "number": 3,
+      "id": "I_kwDOIkxeKc5YW7hP",
+      "title": "we should probably get even more specific here (in later iterations)",
+      "url": "https://github.com/thomas-fossati/draft-fossati-cose-profile/issues/3",
+      "state": "OPEN",
+      "author": "thomas-fossati",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "        we should probably get even more specific here (in later iterations)\r\n\r\n_Originally posted by @henkbirkholz in https://github.com/thomas-fossati/draft-fossati-cose-profile/pull/1#discussion_r1042443147_\r\n      ",
+      "createdAt": "2022-12-07T17:09:50Z",
+      "updatedAt": "2022-12-07T17:12:22Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "body": "One possible elaboration: we should retain the \"COSE tag\" from RF 9052 and prepend it with a profile tag",
+          "createdAt": "2022-12-07T17:12:21Z",
+          "updatedAt": "2022-12-07T17:12:21Z"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "id": "I_kwDOIkxeKc5YW_Lh",
+      "title": "Define registry for registered-profile?",
+      "url": "https://github.com/thomas-fossati/draft-fossati-cose-profile/issues/4",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Should we define the registry that will be used to hold values for registered-profile?\r\n\r\nDo we define ranges?\r\nWhat is the registration policy for each of these ranges?\r\n",
+      "createdAt": "2022-12-07T17:16:25Z",
+      "updatedAt": "2022-12-07T17:16:25Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOIkxeKc5EqQc9",
+      "title": "Add various thoughts",
+      "url": "https://github.com/thomas-fossati/draft-fossati-cose-profile/pull/1",
+      "state": "MERGED",
+      "author": "cabo",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2022-12-07T16:22:41Z",
+      "updatedAt": "2022-12-07T17:12:10Z",
+      "baseRepository": "thomas-fossati/draft-fossati-cose-profile",
+      "baseRefName": "main",
+      "baseRefOid": "313dc70bd64af47f77362c3ae81591d8b1286232",
+      "headRepository": "cabo/draft-fossati-cose-profile",
+      "headRefName": "various",
+      "headRefOid": "1c09319312dc0c883237e943a5f9d21e547108b6",
+      "closedAt": "2022-12-07T17:12:10Z",
+      "mergedAt": "2022-12-07T17:12:10Z",
+      "mergedBy": "thomas-fossati",
+      "mergeCommit": {
+        "oid": "103a96e9da84e05c93acb67841d1467af974ab36"
+      },
+      "comments": [
+        {
+          "author": "SteveLasker",
+          "authorAssociation": "NONE",
+          "body": "Thankss @cabo for the PR",
+          "createdAt": "2022-12-07T16:48:01Z",
+          "updatedAt": "2022-12-07T16:48:01Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOIkxeKc5IDFn1",
+          "commit": {
+            "abbreviatedOid": "3f46922"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2022-12-07T16:42:49Z",
+          "updatedAt": "2022-12-07T16:46:18Z",
+          "comments": [
+            {
+              "originalPosition": 16,
+              "body": "we should probably get even more specific here (in later iterations)",
+              "createdAt": "2022-12-07T16:42:49Z",
+              "updatedAt": "2022-12-07T16:46:18Z"
+            },
+            {
+              "originalPosition": 45,
+              "body": "```suggestion\r\n```",
+              "createdAt": "2022-12-07T16:45:14Z",
+              "updatedAt": "2022-12-07T16:46:18Z"
+            },
+            {
+              "originalPosition": 46,
+              "body": "```suggestion\r\nThis memo defines a header parameter \"cose-profile\" that needs to\r\n```",
+              "createdAt": "2022-12-07T16:45:49Z",
+              "updatedAt": "2022-12-07T16:54:15Z"
+            },
+            {
+              "originalPosition": 51,
+              "body": "worth replacing right away",
+              "createdAt": "2022-12-07T16:46:10Z",
+              "updatedAt": "2022-12-07T16:46:18Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOIkxeKc5IDJ_E",
+          "commit": {
+            "abbreviatedOid": "3f46922"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-12-07T16:54:01Z",
+          "updatedAt": "2022-12-07T16:54:02Z",
+          "comments": [
+            {
+              "originalPosition": 46,
+              "body": "Anticipating #2, I am changing this here already, too.",
+              "createdAt": "2022-12-07T16:54:01Z",
+              "updatedAt": "2022-12-07T16:54:02Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOIkxeKc5IDL_c",
+          "commit": {
+            "abbreviatedOid": "3f46922"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "thanks!",
+          "createdAt": "2022-12-07T16:59:04Z",
+          "updatedAt": "2022-12-07T16:59:04Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOIkxeKc5IDMbQ",
+          "commit": {
+            "abbreviatedOid": "3f46922"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-12-07T17:00:05Z",
+          "updatedAt": "2022-12-07T17:00:05Z",
+          "comments": [
+            {
+              "originalPosition": 16,
+              "body": "would you mind raising an issue to track future actions?",
+              "createdAt": "2022-12-07T17:00:05Z",
+              "updatedAt": "2022-12-07T17:00:05Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOIkxeKc5IDQ25",
+          "commit": {
+            "abbreviatedOid": "3f46922"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-12-07T17:11:19Z",
+          "updatedAt": "2022-12-07T17:11:19Z",
+          "comments": [
+            {
+              "originalPosition": 51,
+              "body": "I see you've done that in #2",
+              "createdAt": "2022-12-07T17:11:19Z",
+              "updatedAt": "2022-12-07T17:11:19Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOIkxeKc5IDRC7",
+          "commit": {
+            "abbreviatedOid": "1c09319"
+          },
+          "author": "letmaik",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-12-07T17:11:48Z",
+          "updatedAt": "2022-12-07T17:11:48Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "id": "PR_kwDOIkxeKc5Eqc6i",
+      "title": "Changing the header member name to kebab-case",
+      "url": "https://github.com/thomas-fossati/draft-fossati-cose-profile/pull/2",
+      "state": "MERGED",
+      "author": "henkbirkholz",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Signed-off-by: Henk Birkholz <henk.birkholz@sit.fraunhofer.de>",
+      "createdAt": "2022-12-07T16:51:33Z",
+      "updatedAt": "2022-12-07T17:12:50Z",
+      "baseRepository": "thomas-fossati/draft-fossati-cose-profile",
+      "baseRefName": "main",
+      "baseRefOid": "313dc70bd64af47f77362c3ae81591d8b1286232",
+      "headRepository": "thomas-fossati/draft-fossati-cose-profile",
+      "headRefName": "hm-name",
+      "headRefOid": "6ba6e066d34693b13aca0cd721a5e045eb092b18",
+      "closedAt": "2022-12-07T17:12:50Z",
+      "mergedAt": "2022-12-07T17:12:50Z",
+      "mergedBy": "thomas-fossati",
+      "mergeCommit": {
+        "oid": "e6343c7ebe8d5ae7a3b3d48e2abd96bb12cb650e"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOIkxeKc5IDRVU",
+          "commit": {
+            "abbreviatedOid": "6ba6e06"
+          },
+          "author": "letmaik",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-12-07T17:12:33Z",
+          "updatedAt": "2022-12-07T17:12:33Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOIkxeKc5IDRYb",
+          "commit": {
+            "abbreviatedOid": "6ba6e06"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-12-07T17:12:41Z",
+          "updatedAt": "2022-12-07T17:12:41Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "id": "PR_kwDOIkxeKc5EqsQD",
+      "title": "nits",
+      "url": "https://github.com/thomas-fossati/draft-fossati-cose-profile/pull/5",
+      "state": "OPEN",
+      "author": "thomas-fossati",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Signed-off-by: Thomas Fossati <thomas.fossati@arm.com>",
+      "createdAt": "2022-12-07T17:23:38Z",
+      "updatedAt": "2022-12-07T17:23:38Z",
+      "baseRepository": "thomas-fossati/draft-fossati-cose-profile",
+      "baseRefName": "main",
+      "baseRefOid": "e6343c7ebe8d5ae7a3b3d48e2abd96bb12cb650e",
+      "headRepository": "thomas-fossati/draft-fossati-cose-profile",
+      "headRefName": "nits",
+      "headRefOid": "b0157ff9d01f21c1e33424f34ddd780e5fa36149",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 6,
+      "id": "PR_kwDOIkxeKc5Espv3",
+      "title": "Fix a typo",
+      "url": "https://github.com/thomas-fossati/draft-fossati-cose-profile/pull/6",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "I messed this up, so I'm giving you a PR to fix it.",
+      "createdAt": "2022-12-07T22:25:51Z",
+      "updatedAt": "2022-12-07T22:25:51Z",
+      "baseRepository": "thomas-fossati/draft-fossati-cose-profile",
+      "baseRefName": "main",
+      "baseRefOid": "e6343c7ebe8d5ae7a3b3d48e2abd96bb12cb650e",
+      "headRepository": "martinthomson/draft-fossati-cose-profile",
+      "headRefName": "patch-1",
+      "headRefOid": "f186a3685197a81c3b8ef3efd35a0447b4f86839",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    }
+  ]
+}
