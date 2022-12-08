@@ -5,8 +5,8 @@
 CBOR Object Signing and Encryption                            T. Fossati
 Internet-Draft                                               Arm Limited
 Intended status: Standards Track                             H. Birkholz
-Expires: 10 June 2023                                     Fraunhofer SIT
-                                                         7 December 2022
+Expires: 11 June 2023                                     Fraunhofer SIT
+                                                         8 December 2022
 
 
                              COSE Profiles
@@ -48,7 +48,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 10 June 2023.
+   This Internet-Draft will expire on 11 June 2023.
 
 Copyright Notice
 
@@ -68,7 +68,7 @@ Table of Contents
 
    1.  Introduction
    2.  Conventions and Definitions
-   3.  Rules
+   3.  Profiling Rules
    4.  COSE profile header parameter
    5.  Security Considerations
    6.  IANA Considerations
@@ -78,7 +78,8 @@ Table of Contents
 
 1.  Introduction
 
-   This document lays a set of rules for how to define COSE profiles.
+   This document lays a set of rules for how to define COSE [STD96]
+   profiles.
 
 2.  Conventions and Definitions
 
@@ -88,7 +89,7 @@ Table of Contents
    BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
 
-3.  Rules
+3.  Profiling Rules
 
    A COSE profile:
 
@@ -106,13 +107,16 @@ Table of Contents
    *  MUST use CDDL [RFC8610] to fully specify the syntax rules for the
       profile
 
-   *  MUST use the cose-profile header attribute in the protected header
+   *  MUST use the cose-profile header attribute (see Section 4) in the
+      protected header
 
       -  The value of cose-profile MUST be globally unique.  Possible
          choices include:
 
          o  IANA registry
-            // -- get more specific here (in later iterations)
+            // (see https://github.com/thomas-fossati/draft-fossati-
+            cose-profile/
+            // issues/4)
 
          o  using an OID [RFC9090], URI [STD66] or CRI
             [I-D.ietf-core-href]
@@ -120,11 +124,13 @@ Table of Contents
          o  using a UUID [RFC4122]
 
       -  The chosen value SHOULD be appropriate for the intended usage
-         scope (e.g., a small value when used in constrained node
+         scope (e.g., a short value when used in constrained node
          environments)
 
    *  MAY define its own CBOR tag
-      // -- get more specific here (in later iterations)
+      // (see https://github.com/thomas-fossati/draft-fossati-cose-
+      profile/
+      // issues/3)
 
    *  SHOULD define its complementary media-type and content-format
 
