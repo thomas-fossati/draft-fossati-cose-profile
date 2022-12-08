@@ -58,14 +58,14 @@ This document lays a set of rules for how to define COSE profiles.
 
 # Introduction
 
-This document lays a set of rules for how to define COSE profiles.
+This document lays a set of rules for how to define COSE {{-cose}} profiles.
 
 
 # Conventions and Definitions
 
 {::boilerplate bcp14-tagged}
 
-# Rules
+# Profiling Rules
 
 A COSE profile:
 
@@ -76,18 +76,19 @@ A COSE profile:
 * MAY define new header attributes
   * if so, it MUST provide their definition in the same document
 * MUST use CDDL {{-cddl}} to fully specify the syntax rules for the profile
-* MUST use the `cose-profile` header attribute in the protected header
+* MUST use the `cose-profile` header attribute (see {{hdr-param}}) in the protected header
   * The value of `cose-profile` MUST be globally unique.  Possible choices include:
-    * IANA registry[^tag]
+    * IANA registry [^iana]
     * using an OID {{-oid}}, URI {{-uri}} or CRI {{-cri}}
     * using a UUID {{-uuid}}
   * The chosen value SHOULD be appropriate for the intended usage scope (e.g., a short value when used in constrained node environments)
-* MAY define its own CBOR tag[^tag]
+* MAY define its own CBOR tag [^tag]
 * SHOULD define its complementary media-type and content-format
 
-[^tag]: -- get more specific here (in later iterations)
+[^tag]: (see https://github.com/thomas-fossati/draft-fossati-cose-profile/issues/3)
+[^iana]: (see https://github.com/thomas-fossati/draft-fossati-cose-profile/issues/4)
 
-# COSE profile header parameter
+# COSE profile header parameter {#hdr-param}
 
 ~~~ cddl
 COSE-profile = registered-profile / oid-profile / uri-profile
