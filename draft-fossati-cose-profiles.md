@@ -81,7 +81,7 @@ A COSE profile:
     * IANA registry[^tag]
     * using an OID {{-oid}}, URI {{-uri}} or CRI {{-cri}}
     * using a UUID {{-uuid}}
-  * The chosen value SHOULD be appropriate for the intended usage scope (e.g., a small value when used in constrained node environments)
+  * The chosen value SHOULD be appropriate for the intended usage scope (e.g., a short value when used in constrained node environments)
 * MAY define its own CBOR tag[^tag]
 * SHOULD define its complementary media-type and content-format
 
