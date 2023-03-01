@@ -45,6 +45,7 @@ normative:
   I-D.ietf-sacm-coswid: coswid
   RFC4122: uuid
   RFC9090: oid
+  RFC8126: ianacons
 
 informative:
 
@@ -146,8 +147,37 @@ TODO Security
 
 # IANA Considerations
 
-This document defines a header parameter "cose-profile-CPA" (suggested value 13) that needs to
-be registered in the "COSE Header Parameters" registry.
+## New COSE Profile Header Parameter
+
+This document requests IANA to allocate a new header parameter `cose-profile-CPA` (suggested value 13)
+in the "COSE Header Parameters" {{!IANA.cose}} registry.
+
+## COSE Profile Sub-registry
+
+This specification requests IANA to create a new sub-registry for COSE {{!IANA.cose}},
+with the policy "specification required" ({{Section 4.6 of -ianacons}}).
+
+Each entry in the registry must include:
+
+{:vspace}
+Key value:
+: integer value for the profile
+
+Name:
+: a name that could be used in implementations for the key
+
+Brief description:
+: a brief description
+
+Change Controller:
+: (see {{Section 2.3 of -ianacons}})
+
+Reference:
+: a reference document
+
+The expert is requested to assign the shortest key values (1+0 and
+1+1 encoding) to registrations that are likely to enjoy wide use and
+can benefit from short encodings.
 
 --- back
 
