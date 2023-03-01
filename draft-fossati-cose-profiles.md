@@ -80,15 +80,14 @@ A COSE profile:
 * MUST use CDDL {{-cddl}} to fully specify the syntax rules for the profile
 * MUST use the `cose-profile` header attribute (see {{hdr-param}}) in the protected header
   * The value of `cose-profile` MUST be globally unique.  Possible choices include:
-    * IANA registry [^iana]
+    * IANA registry ({{sec-profile-registry}})
     * using an OID {{-oid}}, URI {{-uri}} or CRI {{-cri}}
     * using a UUID {{-uuid}}
   * The chosen value SHOULD be appropriate for the intended usage scope (e.g., a short value when used in constrained node environments)
-* MAY define its own CBOR tag [^tag]
+* MAY define its own CBOR tag that can be used together with, or in lieu of, the underlying COSE CBOR tag (Table 1, {{Section 2 of -cose}})
 * SHOULD define its complementary media-type and content-format
 
 [^tag]: (see https://github.com/thomas-fossati/draft-fossati-cose-profile/issues/3)
-[^iana]: (see https://github.com/thomas-fossati/draft-fossati-cose-profile/issues/4)
 
 # COSE profile header parameter {#hdr-param}
 
@@ -109,11 +108,40 @@ oid = #6.111(bstr)
 cri = [*any]
 ~~~
 
-# Profile Registration Checklist
+# Profile Registration Template
 
-# The CoSWID Exercise
+* What is the profile identifier?
+* Requires certain header keys?
+* Constrains any header keys?
+* Constrains any header values?
+* Defines new header keys?
+* Defines its own CBOR Tag?
+* Defines its own Media Type?
+* What payload(s) allows?
 
-In this section we illustrate how to define a COSE profile for CoSWID.
+# CoSWID COSE Profile Definition
+
+This section defines the COSE profile for CoSWID {{-coswid}}.
+
+This definition is semantically and syntactically equivalent with what is
+described in {{Section 7 of -coswid}}, with the exception of the explicit
+CoSWID COSE profile indicator that is added to the protected header.
+
+
+
+## CDDL Definition
+
+~~~ cddl
+protected-signed-coswid-header = {
+  &(alg: 1) => int
+  &(content-type: 3) => "application/swid+cbor"
+  &(cose-profile-CPA: 13) => &(CoSWID-COSE-profile-CPA: 0)
+  * cose-label => cose-values
+}
+
+cose-label = int / text
+cose-values = any
+~~~
 
 ## Checklist
 
@@ -124,23 +152,6 @@ In this section we illustrate how to define a COSE profile for CoSWID.
 * Defines its own CBOR Tag? YES
 * Defines its own Media Type? YES
 
-## CDDL Definition
-
-~~~ cddl
-protected-signed-coswid-header = {
-    &(alg: 1) => int,                      ; algorithm identifier
-    &(content-type: 3) => "application/swid+cbor",
-    &(cose-profile-CPA: 13) => CoSWID-COSE-profile,
-    * cose-label => cose-values,
-}
-
-CoSWID-COSE-profile-uri = "cose://RFCXXXX"
-CoSWID-COSE-profile-cri = [ "cose", ["RFCXXXX"]]
-
-CoSWID-COSE-profile /= CoSWID-COSE-profile-uri
-CoSWID-COSE-profile /= CoSWID-COSE-profile-cri
-~~~
-
 # Security Considerations
 
 TODO Security
@@ -149,22 +160,21 @@ TODO Security
 
 ## New COSE Profile Header Parameter
 
-This document requests IANA to allocate a new header parameter `cose-profile-CPA` (suggested value 13)
-in the "COSE Header Parameters" {{!IANA.cose}} registry.
+This document requests IANA to allocate a new header parameter
+`cose-profile-CPA` (suggested value 13) in the "COSE Header Parameters"
+{{!IANA.cose}} registry.
 
-## COSE Profile Sub-registry
+## COSE Profile Sub-registry {#sec-profile-registry}
 
-This specification requests IANA to create a new sub-registry for COSE {{!IANA.cose}},
-with the policy "specification required" ({{Section 4.6 of -ianacons}}).
+This specification requests IANA to create a new sub-registry for COSE
+{{!IANA.cose}}, with the policy "specification required" ({{Section 4.6 of
+-ianacons}}).
 
 Each entry in the registry must include:
 
 {:vspace}
 Key value:
 : integer value for the profile
-
-Name:
-: a name that could be used in implementations for the key
 
 Brief description:
 : a brief description
