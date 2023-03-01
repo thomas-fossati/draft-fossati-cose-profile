@@ -42,6 +42,7 @@ normative:
     -: cose
     =: RFC9052
   I-D.ietf-core-href: cri
+  I-D.ietf-sacm-coswid: coswid
   RFC4122: uuid
   RFC9090: oid
 
@@ -107,13 +108,45 @@ oid = #6.111(bstr)
 cri = [*any]
 ~~~
 
+# Profile Registration Checklist
+
+# The CoSWID Exercise
+
+In this section we illustrate how to define a COSE profile for CoSWID.
+
+## Checklist
+
+* Mandatory header keys? YES
+* Constrains header keys? NO
+* Constrains header values? YES (alg is only int)
+* New header keys? NO
+* Defines its own CBOR Tag? YES
+* Defines its own Media Type? YES
+
+## CDDL Definition
+
+~~~ cddl
+protected-signed-coswid-header = {
+    &(alg: 1) => int,                      ; algorithm identifier
+    &(content-type: 3) => "application/swid+cbor",
+    &(cose-profile-CPA: 13) => CoSWID-COSE-profile,
+    * cose-label => cose-values,
+}
+
+CoSWID-COSE-profile-uri = "cose://RFCXXXX"
+CoSWID-COSE-profile-cri = [ "cose", ["RFCXXXX"]]
+
+CoSWID-COSE-profile /= CoSWID-COSE-profile-uri
+CoSWID-COSE-profile /= CoSWID-COSE-profile-cri
+~~~
 
 # Security Considerations
 
 TODO Security
 
 # IANA Considerations
-This document defines a header parameter "cose-profile" that needs to
+
+This document defines a header parameter "cose-profile-CPA" (suggested value 13) that needs to
 be registered in the "COSE Header Parameters" registry.
 
 --- back
