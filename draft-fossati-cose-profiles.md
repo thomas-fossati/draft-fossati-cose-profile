@@ -48,6 +48,13 @@ normative:
   RFC8126: ianacons
 
 informative:
+  GlueCOSE:
+    title: >
+      Test Vectors
+    author:
+      org: The GlueCOSE Community
+    date: false
+    target: https://github.com/gluecose/test-vectors
 
 entity:
   SELF: "RFCthis"
@@ -191,7 +198,17 @@ can benefit from short encodings.
 
 --- back
 
+# GlueCOSE Test Cases
+
+The community effort {{GlueCOSE}} provides test vectors for the COSE specification.
+
+The CDDL definition for the test vector format used for COSE profiles will be provided in a future version of this document.
+
+[^issue] https://github.com/ietf-rats-wg/draft-ietf-rats-corim/issues/4
+
 # Acknowledgments
 {:numbered="false"}
 
 TODO acknowledge.
+
+[^issue]: Tracked at:
