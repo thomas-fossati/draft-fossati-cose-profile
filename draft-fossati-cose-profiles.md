@@ -49,8 +49,7 @@ normative:
 
 informative:
   GlueCOSE:
-    title: >
-      Test Vectors
+    title: Test Vectors
     author:
       org: The GlueCOSE Community
     date: false
@@ -61,14 +60,20 @@ entity:
 
 --- abstract
 
-This document lays a set of rules for how to define COSE profiles.
+COSE (STD96) is not an end-to-end system with guaranteed interoperability.
+It is designed to serve a range of use cases and therefore it has a lot of options.
+In general, two COSE implementations that want to interoperate require an agreement on which subset of COSE features they will use.
+This document provides a set of rules for specifying such agreements as "COSE profiles" and registers a new COSE header parameter for in-band signalling of profile information.
 
 --- middle
 
 # Introduction
 
-This document lays a set of rules for how to define COSE {{-cose}} profiles.
+COSE {{-cose}} is not an end-to-end system with guaranteed interoperability.
+ It is designed to serve a range of use cases and therefore it has a lot of options.
+ In general, two COSE implementations that want to interoperate require an agreement on which subset of COSE features they will use.
 
+This document provides a set of rules for specifying such agreements as "COSE profiles" and registers a new COSE header parameter for in-band signalling of profile information.
 
 # Conventions and Definitions
 
@@ -209,6 +214,6 @@ The CDDL definition for the test vector format used for COSE profiles will be pr
 # Acknowledgments
 {:numbered="false"}
 
-TODO acknowledge.
+Laurence Lundblade who - unknowingly :-) - provided the introduction.
 
 [^issue]: Tracked at:
