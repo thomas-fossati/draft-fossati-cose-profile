@@ -63,7 +63,7 @@ entity:
 COSE (STD96) is not an end-to-end system with guaranteed interoperability.
 It is designed to serve a range of use cases and therefore it has a lot of options.
 In general, two COSE implementations that want to interoperate require an agreement on which subset of COSE features they will use.
-This document provides a set of rules for specifying such agreements as a "COSE profiles" and registers a new COSE header parameter for in-band signalling profile information.
+This document provides a set of rules for specifying such agreements as "COSE profiles" and registers a new COSE header parameter for in-band signalling profile information.
 
 --- middle
 
