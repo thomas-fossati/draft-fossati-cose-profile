@@ -99,7 +99,7 @@ A COSE profile:
 * MAY define its own CBOR tag that can be used together with, or in lieu of, the underlying COSE CBOR tag (Table 1, {{Section 2 of -cose}})
 * SHOULD define its complementary media-type and content-format
 
-[^tag]: (see https://github.com/thomas-fossati/draft-fossati-cose-profile/issues/3)
+
 
 # COSE profile header parameter {#hdr-param}
 
@@ -122,6 +122,10 @@ cri = [*any]
 
 # Profile Registration Template
 
+[^note] This is just an initial sketch.
+
+[^issue] https://github.com/ietf-rats-wg/draft-ietf-rats-corim/issues/10
+
 * What is the profile identifier?
 * Requires certain header keys?
 * Constrains any header keys?
@@ -133,13 +137,15 @@ cri = [*any]
 
 # CoSWID COSE Profile Definition
 
+[^note] This is just an initial sketch.
+
+[^issue] https://github.com/ietf-rats-wg/draft-ietf-rats-corim/issues/10
+
 This section defines the COSE profile for CoSWID {{-coswid}}.
 
 This definition is semantically and syntactically equivalent with what is
 described in {{Section 7 of -coswid}}, with the exception of the explicit
 CoSWID COSE profile indicator that is added to the protected header.
-
-
 
 ## CDDL Definition
 
@@ -217,3 +223,4 @@ The CDDL definition for the test vector format used for COSE profiles will be pr
 Laurence Lundblade who - unknowingly :-) - provided the introduction.
 
 [^issue]: Tracked at:
+[^note]: Note:
