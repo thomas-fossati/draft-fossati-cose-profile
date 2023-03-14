@@ -1,0 +1,735 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2023-03-14T00:42:54.513558+00:00",
+  "repo": "thomas-fossati/draft-fossati-cose-profile",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [
+    {
+      "number": 3,
+      "id": "I_kwDOIkxeKc5YW7hP",
+      "title": "we should probably get even more specific here (in later iterations)",
+      "url": "https://github.com/thomas-fossati/draft-fossati-cose-profile/issues/3",
+      "state": "CLOSED",
+      "author": "thomas-fossati",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "        we should probably get even more specific here (in later iterations)\r\n\r\n_Originally posted by @henkbirkholz in https://github.com/thomas-fossati/draft-fossati-cose-profile/pull/1#discussion_r1042443147_\r\n      ",
+      "createdAt": "2022-12-07T17:09:50Z",
+      "updatedAt": "2023-03-13T12:31:15Z",
+      "closedAt": "2023-03-13T12:30:59Z",
+      "comments": [
+        {
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "body": "One possible elaboration: we should retain the \"COSE tag\" from RF 9052 and prepend it with a profile tag",
+          "createdAt": "2022-12-07T17:12:21Z",
+          "updatedAt": "2022-12-07T17:12:21Z"
+        },
+        {
+          "author": "thomas-fossati",
+          "authorAssociation": "OWNER",
+          "body": "the clarification is already in the editor's copy",
+          "createdAt": "2023-03-13T12:31:14Z",
+          "updatedAt": "2023-03-13T12:31:14Z"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "id": "I_kwDOIkxeKc5YW_Lh",
+      "title": "Define registry for registered-profile?",
+      "url": "https://github.com/thomas-fossati/draft-fossati-cose-profile/issues/4",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Should we define the registry that will be used to hold values for registered-profile?\r\n\r\nDo we define ranges?\r\nWhat is the registration policy for each of these ranges?\r\n",
+      "createdAt": "2022-12-07T17:16:25Z",
+      "updatedAt": "2023-03-01T16:40:13Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> Should we define the registry that will be used to hold values for registered-profile?\r\n\r\nyes\r\n\r\n> Do we define ranges?\r\n> What is the registration policy for each of these ranges?\r\n\r\nRather policy than range. Maybe:\r\n\r\n\"The designated expert is requested to assign the shortest key values (1+0 and 1+1 encoding) to registrations that are likely to enjoy wide use and can benefit from short encodings.\"\r\n\r\nand\r\n\r\n\"Specification required\"\r\n\r\n\r\n",
+          "createdAt": "2023-03-01T16:40:12Z",
+          "updatedAt": "2023-03-01T16:40:12Z"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "id": "I_kwDOIkxeKc5d-G3A",
+      "title": "Define test vectors for each value type of the COSE profile header parameter",
+      "url": "https://github.com/thomas-fossati/draft-fossati-cose-profile/issues/7",
+      "state": "CLOSED",
+      "author": "letmaik",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "- Test vectors in JSON\r\n- a simple reference encoder/decoder using an off-the-shelve CBOR library\r\n- a test script that runs all test vectors against the reference implementation\r\n\r\nProposed JSON format:\r\n\r\n```json\r\n{\r\n  \"title\": \"OID profile\",\r\n  \"fail\": false,\r\n  \"cbor\": \"...hex...\",\r\n  \"type\": \"oid\",\r\n  \"value\": \"1.2.3.4\"\r\n}\r\n```\r\n\r\nThe above could be used to test both encoder and decoder. For error cases I would focus on decoding only:\r\n\r\n```json\r\n{\r\n  \"title\": \"Invalid URI profile (tagged)\",\r\n  \"fail\": true,\r\n  \"cbor\": \"...hex..\"\r\n}\r\n```",
+      "createdAt": "2023-02-08T17:57:12Z",
+      "updatedAt": "2023-03-01T16:25:40Z",
+      "closedAt": "2023-03-01T16:25:40Z",
+      "comments": [
+        {
+          "author": "thomas-fossati",
+          "authorAssociation": "OWNER",
+          "body": "This is a beautiful idea.  But it should be tracked in the [gluecose org](https://github.com/gluecose/test-vectors/issues/13).",
+          "createdAt": "2023-03-01T16:16:31Z",
+          "updatedAt": "2023-03-01T16:23:30Z"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "id": "I_kwDOIkxeKc5d-KdV",
+      "title": "Relation to JOSE's `typ`",
+      "url": "https://github.com/thomas-fossati/draft-fossati-cose-profile/issues/8",
+      "state": "OPEN",
+      "author": "letmaik",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "JOSE defines a header parameter called [`\"typ\"`](https://www.rfc-editor.org/rfc/rfc7515.html#section-4.1.9) which is the media type of the whole envelope. COSE doesn't have an equivalent currently. Specifically for JWTs, the `+jwt` structured suffix was registered and is used (though sparingly so far) in some places, for example https://www.iana.org/assignments/media-types/application/at+jwt.\r\n\r\nCOSE profiles seem to fill a similar gap. I think comparing both approaches and determining whether or not they are complementary would be helpful.",
+      "createdAt": "2023-02-08T18:07:45Z",
+      "updatedAt": "2023-03-10T13:27:29Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "OR13",
+          "authorAssociation": "NONE",
+          "body": "notably, `+cose` is not a registered suffix, AFAIK.",
+          "createdAt": "2023-03-09T17:41:33Z",
+          "updatedAt": "2023-03-09T17:41:33Z"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "id": "I_kwDOIkxeKc5gY1im",
+      "title": "Laurence on profiles",
+      "url": "https://github.com/thomas-fossati/draft-fossati-cose-profile/issues/9",
+      "state": "CLOSED",
+      "author": "thomas-fossati",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Maybe add something similar to this to the intro / abstract:\r\n\r\n_\"COSE is not an end-end system with guaranteed interoperability. It has to be profiled to interoperate. It is designed to serve a huge range of use cases so it has a lot of options.\"_",
+      "createdAt": "2023-03-09T12:21:41Z",
+      "updatedAt": "2023-03-13T12:06:21Z",
+      "closedAt": "2023-03-13T12:06:21Z",
+      "comments": []
+    },
+    {
+      "number": 10,
+      "id": "I_kwDOIkxeKc5gY4jA",
+      "title": "Profile registration template",
+      "url": "https://github.com/thomas-fossati/draft-fossati-cose-profile/issues/10",
+      "state": "OPEN",
+      "author": "thomas-fossati",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Define a \"profile registration\" template and use CoSWID as a guinea pig.",
+      "createdAt": "2023-03-09T12:28:40Z",
+      "updatedAt": "2023-03-13T12:16:28Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 11,
+      "id": "I_kwDOIkxeKc5gbEeP",
+      "title": "Relation to media types",
+      "url": "https://github.com/thomas-fossati/draft-fossati-cose-profile/issues/11",
+      "state": "OPEN",
+      "author": "OR13",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "For example:\r\n\r\n`application/ld+json; profile=\"https://www.w3.org/ns/activitystreams\"`\r\n\r\nThere is also this draft for \"multiple suffixes\".\r\n\r\nhttps://datatracker.ietf.org/doc/draft-ietf-mediaman-suffixes/\r\n\r\nFor example:\r\n\r\n`application/resource+subtype+ld+cbor` vs...\r\n\r\n`application/resource.v123+subtype+ld+json` etc...\r\n\r\nWhat about:\r\n\r\n`application/cbor; profile=\"https://example.com\"`",
+      "createdAt": "2023-03-09T17:46:52Z",
+      "updatedAt": "2023-03-09T17:49:53Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOIkxeKc5EqQc9",
+      "title": "Add various thoughts",
+      "url": "https://github.com/thomas-fossati/draft-fossati-cose-profile/pull/1",
+      "state": "MERGED",
+      "author": "cabo",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2022-12-07T16:22:41Z",
+      "updatedAt": "2022-12-07T17:12:10Z",
+      "baseRepository": "thomas-fossati/draft-fossati-cose-profile",
+      "baseRefName": "main",
+      "baseRefOid": "313dc70bd64af47f77362c3ae81591d8b1286232",
+      "headRepository": "cabo/draft-fossati-cose-profile",
+      "headRefName": "various",
+      "headRefOid": "1c09319312dc0c883237e943a5f9d21e547108b6",
+      "closedAt": "2022-12-07T17:12:10Z",
+      "mergedAt": "2022-12-07T17:12:10Z",
+      "mergedBy": "thomas-fossati",
+      "mergeCommit": {
+        "oid": "103a96e9da84e05c93acb67841d1467af974ab36"
+      },
+      "comments": [
+        {
+          "author": "SteveLasker",
+          "authorAssociation": "NONE",
+          "body": "Thankss @cabo for the PR",
+          "createdAt": "2022-12-07T16:48:01Z",
+          "updatedAt": "2022-12-07T16:48:01Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOIkxeKc5IDFn1",
+          "commit": {
+            "abbreviatedOid": "3f46922"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2022-12-07T16:42:49Z",
+          "updatedAt": "2022-12-07T16:46:18Z",
+          "comments": [
+            {
+              "originalPosition": 16,
+              "body": "we should probably get even more specific here (in later iterations)",
+              "createdAt": "2022-12-07T16:42:49Z",
+              "updatedAt": "2022-12-07T16:46:18Z"
+            },
+            {
+              "originalPosition": 45,
+              "body": "```suggestion\r\n```",
+              "createdAt": "2022-12-07T16:45:14Z",
+              "updatedAt": "2022-12-07T16:46:18Z"
+            },
+            {
+              "originalPosition": 46,
+              "body": "```suggestion\r\nThis memo defines a header parameter \"cose-profile\" that needs to\r\n```",
+              "createdAt": "2022-12-07T16:45:49Z",
+              "updatedAt": "2022-12-07T16:54:15Z"
+            },
+            {
+              "originalPosition": 51,
+              "body": "worth replacing right away",
+              "createdAt": "2022-12-07T16:46:10Z",
+              "updatedAt": "2022-12-07T16:46:18Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOIkxeKc5IDJ_E",
+          "commit": {
+            "abbreviatedOid": "3f46922"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-12-07T16:54:01Z",
+          "updatedAt": "2022-12-07T16:54:02Z",
+          "comments": [
+            {
+              "originalPosition": 46,
+              "body": "Anticipating #2, I am changing this here already, too.",
+              "createdAt": "2022-12-07T16:54:01Z",
+              "updatedAt": "2022-12-07T16:54:02Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOIkxeKc5IDL_c",
+          "commit": {
+            "abbreviatedOid": "3f46922"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "thanks!",
+          "createdAt": "2022-12-07T16:59:04Z",
+          "updatedAt": "2022-12-07T16:59:04Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOIkxeKc5IDMbQ",
+          "commit": {
+            "abbreviatedOid": "3f46922"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-12-07T17:00:05Z",
+          "updatedAt": "2022-12-07T17:00:05Z",
+          "comments": [
+            {
+              "originalPosition": 16,
+              "body": "would you mind raising an issue to track future actions?",
+              "createdAt": "2022-12-07T17:00:05Z",
+              "updatedAt": "2022-12-07T17:00:05Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOIkxeKc5IDQ25",
+          "commit": {
+            "abbreviatedOid": "3f46922"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-12-07T17:11:19Z",
+          "updatedAt": "2022-12-07T17:11:19Z",
+          "comments": [
+            {
+              "originalPosition": 51,
+              "body": "I see you've done that in #2",
+              "createdAt": "2022-12-07T17:11:19Z",
+              "updatedAt": "2022-12-07T17:11:19Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOIkxeKc5IDRC7",
+          "commit": {
+            "abbreviatedOid": "1c09319"
+          },
+          "author": "letmaik",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-12-07T17:11:48Z",
+          "updatedAt": "2022-12-07T17:11:48Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "id": "PR_kwDOIkxeKc5Eqc6i",
+      "title": "Changing the header member name to kebab-case",
+      "url": "https://github.com/thomas-fossati/draft-fossati-cose-profile/pull/2",
+      "state": "MERGED",
+      "author": "henkbirkholz",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Signed-off-by: Henk Birkholz <henk.birkholz@sit.fraunhofer.de>",
+      "createdAt": "2022-12-07T16:51:33Z",
+      "updatedAt": "2022-12-07T17:12:50Z",
+      "baseRepository": "thomas-fossati/draft-fossati-cose-profile",
+      "baseRefName": "main",
+      "baseRefOid": "313dc70bd64af47f77362c3ae81591d8b1286232",
+      "headRepository": "thomas-fossati/draft-fossati-cose-profile",
+      "headRefName": "hm-name",
+      "headRefOid": "6ba6e066d34693b13aca0cd721a5e045eb092b18",
+      "closedAt": "2022-12-07T17:12:50Z",
+      "mergedAt": "2022-12-07T17:12:50Z",
+      "mergedBy": "thomas-fossati",
+      "mergeCommit": {
+        "oid": "e6343c7ebe8d5ae7a3b3d48e2abd96bb12cb650e"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOIkxeKc5IDRVU",
+          "commit": {
+            "abbreviatedOid": "6ba6e06"
+          },
+          "author": "letmaik",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-12-07T17:12:33Z",
+          "updatedAt": "2022-12-07T17:12:33Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOIkxeKc5IDRYb",
+          "commit": {
+            "abbreviatedOid": "6ba6e06"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-12-07T17:12:41Z",
+          "updatedAt": "2022-12-07T17:12:41Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "id": "PR_kwDOIkxeKc5EqsQD",
+      "title": "nits",
+      "url": "https://github.com/thomas-fossati/draft-fossati-cose-profile/pull/5",
+      "state": "MERGED",
+      "author": "thomas-fossati",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Signed-off-by: Thomas Fossati <thomas.fossati@arm.com>",
+      "createdAt": "2022-12-07T17:23:38Z",
+      "updatedAt": "2022-12-08T15:56:08Z",
+      "baseRepository": "thomas-fossati/draft-fossati-cose-profile",
+      "baseRefName": "main",
+      "baseRefOid": "e6343c7ebe8d5ae7a3b3d48e2abd96bb12cb650e",
+      "headRepository": "thomas-fossati/draft-fossati-cose-profile",
+      "headRefName": "nits",
+      "headRefOid": "6c55dde3c568a307c5f9347587b32cb8d3907636",
+      "closedAt": "2022-12-08T15:40:22Z",
+      "mergedAt": "2022-12-08T15:40:22Z",
+      "mergedBy": "henkbirkholz",
+      "mergeCommit": {
+        "oid": "e5c117bae01b5ad0837809f39fda2d07e33bf0ea"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOIkxeKc5IGD4Q",
+          "commit": {
+            "abbreviatedOid": "b0157ff"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-12-08T06:57:19Z",
+          "updatedAt": "2022-12-08T06:57:19Z",
+          "comments": [
+            {
+              "originalPosition": 10,
+              "body": "```suggestion\r\n  * The chosen value SHOULD be appropriate for the intended usage scope (e.g., a short value when used in constrained node environments)\r\n```",
+              "createdAt": "2022-12-08T06:57:19Z",
+              "updatedAt": "2022-12-08T06:57:19Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOIkxeKc5II8uZ",
+          "commit": {
+            "abbreviatedOid": "6c55dde"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-12-08T15:40:10Z",
+          "updatedAt": "2022-12-08T15:40:10Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "id": "PR_kwDOIkxeKc5Espv3",
+      "title": "Fix a typo",
+      "url": "https://github.com/thomas-fossati/draft-fossati-cose-profile/pull/6",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I messed this up, so I'm giving you a PR to fix it.",
+      "createdAt": "2022-12-07T22:25:51Z",
+      "updatedAt": "2022-12-08T06:55:08Z",
+      "baseRepository": "thomas-fossati/draft-fossati-cose-profile",
+      "baseRefName": "main",
+      "baseRefOid": "e6343c7ebe8d5ae7a3b3d48e2abd96bb12cb650e",
+      "headRepository": "martinthomson/draft-fossati-cose-profile",
+      "headRefName": "patch-1",
+      "headRefOid": "f186a3685197a81c3b8ef3efd35a0447b4f86839",
+      "closedAt": "2022-12-08T06:55:08Z",
+      "mergedAt": "2022-12-08T06:55:08Z",
+      "mergedBy": "thomas-fossati",
+      "mergeCommit": {
+        "oid": "589913f927a6ebb58ca8c13c0452fe2dccaa0e79"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOIkxeKc5IGDZT",
+          "commit": {
+            "abbreviatedOid": "f186a36"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "thanks!",
+          "createdAt": "2022-12-08T06:55:01Z",
+          "updatedAt": "2022-12-08T06:55:01Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "id": "PR_kwDOIkxeKc5L4dsD",
+      "title": "\"Laurence\" intro text",
+      "url": "https://github.com/thomas-fossati/draft-fossati-cose-profile/pull/12",
+      "state": "MERGED",
+      "author": "thomas-fossati",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Fix #9",
+      "createdAt": "2023-03-13T11:07:23Z",
+      "updatedAt": "2023-03-13T12:06:24Z",
+      "baseRepository": "thomas-fossati/draft-fossati-cose-profile",
+      "baseRefName": "main",
+      "baseRefOid": "188d15cf242a6bc9217c1baaeb55e4c51b82fe2f",
+      "headRepository": "thomas-fossati/draft-fossati-cose-profile",
+      "headRefName": "some-stuff",
+      "headRefOid": "3b9a2d322e197b729b8435917f49b8fd4a3e0c55",
+      "closedAt": "2023-03-13T12:06:20Z",
+      "mergedAt": "2023-03-13T12:06:20Z",
+      "mergedBy": "thomas-fossati",
+      "mergeCommit": {
+        "oid": "945a6a6e0435acef34e457f398b2c24cfd657726"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOIkxeKc5PrYqw",
+          "commit": {
+            "abbreviatedOid": "a91ac04"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-03-13T11:09:51Z",
+          "updatedAt": "2023-03-13T11:09:52Z",
+          "comments": [
+            {
+              "originalPosition": 15,
+              "body": "```suggestion\r\nCOSE (STD96) is not an end-to-end system with guaranteed interoperability.\r\n```",
+              "createdAt": "2023-03-13T11:09:51Z",
+              "updatedAt": "2023-03-13T11:09:52Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOIkxeKc5PrZZV",
+          "commit": {
+            "abbreviatedOid": "7c3e963"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-03-13T11:11:10Z",
+          "updatedAt": "2023-03-13T11:11:11Z",
+          "comments": [
+            {
+              "originalPosition": 17,
+              "body": "```suggestion\r\nIn general, two COSE implementations that want to interoperate need to agree on which subset of COSE features they will be using.\r\n```",
+              "createdAt": "2023-03-13T11:11:10Z",
+              "updatedAt": "2023-03-13T11:11:11Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOIkxeKc5PraDA",
+          "commit": {
+            "abbreviatedOid": "9e3b809"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-03-13T11:12:19Z",
+          "updatedAt": "2023-03-13T11:12:20Z",
+          "comments": [
+            {
+              "originalPosition": 17,
+              "body": "```suggestion\r\nIn general, two COSE implementations that want to interoperate require an agreement on which subset of COSE features they will use.\r\n```",
+              "createdAt": "2023-03-13T11:12:19Z",
+              "updatedAt": "2023-03-13T11:13:56Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOIkxeKc5PrcRX",
+          "commit": {
+            "abbreviatedOid": "10c22f7"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-03-13T11:16:11Z",
+          "updatedAt": "2023-03-13T11:16:12Z",
+          "comments": [
+            {
+              "originalPosition": 18,
+              "body": "```suggestion\r\nThis document provides a set of rules for specifying such agreements as a \"COSE profiles\" and registers a new COSE header parameter for in-band signalling profile information.\r\n```",
+              "createdAt": "2023-03-13T11:16:11Z",
+              "updatedAt": "2023-03-13T11:18:03Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOIkxeKc5Prd5d",
+          "commit": {
+            "abbreviatedOid": "497c617"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-03-13T11:19:03Z",
+          "updatedAt": "2023-03-13T11:19:04Z",
+          "comments": [
+            {
+              "originalPosition": 29,
+              "body": "```suggestion\r\nCOSE {{-cose}} is not an end-to-end system with guaranteed interoperability.\r\n It is designed to serve a range of use cases and therefore it has a lot of options.\r\n In general, two COSE implementations that want to interoperate require an agreement on which subset of COSE features they will use.\r\n\r\nThis document provides a set of rules for specifying such agreements as a \"COSE profiles\" and registers a new COSE header parameter for in-band signalling profile information.\r\n```",
+              "createdAt": "2023-03-13T11:19:03Z",
+              "updatedAt": "2023-03-13T11:19:16Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOIkxeKc5PrelD",
+          "commit": {
+            "abbreviatedOid": "497c617"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-03-13T11:20:22Z",
+          "updatedAt": "2023-03-13T11:20:22Z",
+          "comments": [
+            {
+              "originalPosition": 18,
+              "body": "```suggestion\r\nThis document provides a set of rules for specifying such agreements as \"COSE profiles\" and registers a new COSE header parameter for in-band signalling profile information.\r\n```",
+              "createdAt": "2023-03-13T11:20:22Z",
+              "updatedAt": "2023-03-13T11:20:22Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOIkxeKc5PrewI",
+          "commit": {
+            "abbreviatedOid": "d9b0307"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-03-13T11:20:41Z",
+          "updatedAt": "2023-03-13T11:20:42Z",
+          "comments": [
+            {
+              "originalPosition": 29,
+              "body": "```suggestion\r\nThis document provides a set of rules for specifying such agreements as \"COSE profiles\" and registers a new COSE header parameter for in-band signalling profile information.\r\n```",
+              "createdAt": "2023-03-13T11:20:41Z",
+              "updatedAt": "2023-03-13T11:20:42Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOIkxeKc5PrqwE",
+          "commit": {
+            "abbreviatedOid": "e73b9a7"
+          },
+          "author": "letmaik",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-03-13T11:41:39Z",
+          "updatedAt": "2023-03-13T11:42:04Z",
+          "comments": [
+            {
+              "originalPosition": 18,
+              "body": "```suggestion\r\nThis document provides a set of rules for specifying such agreements as \"COSE profiles\" and registers a new COSE header parameter for in-band signalling of profile information.\r\n```",
+              "createdAt": "2023-03-13T11:41:39Z",
+              "updatedAt": "2023-03-13T11:42:04Z"
+            },
+            {
+              "originalPosition": 29,
+              "body": "```suggestion\r\nThis document provides a set of rules for specifying such agreements as \"COSE profiles\" and registers a new COSE header parameter for in-band signalling of profile information.\r\n```",
+              "createdAt": "2023-03-13T11:41:54Z",
+              "updatedAt": "2023-03-13T11:42:04Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOIkxeKc5PryCy",
+          "commit": {
+            "abbreviatedOid": "3b9a2d3"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "approve content, assuming CI is okay",
+          "createdAt": "2023-03-13T11:55:30Z",
+          "updatedAt": "2023-03-13T11:55:30Z",
+          "comments": []
+        }
+      ]
+    }
+  ]
+}
