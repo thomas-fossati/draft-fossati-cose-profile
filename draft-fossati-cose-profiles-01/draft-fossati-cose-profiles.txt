@@ -3,7 +3,7 @@
 
 
 CBOR Object Signing and Encryption                            T. Fossati
-Internet-Draft                                               Arm Limited
+Internet-Draft                                                    Linaro
 Intended status: Standards Track                             H. Birkholz
 Expires: 17 March 2024                                    Fraunhofer SIT
                                                                O. Steele
@@ -362,8 +362,8 @@ Acknowledgments
 Authors' Addresses
 
    Thomas Fossati
-   Arm Limited
-   Email: thomas.fossati@arm.com
+   Linaro
+   Email: thomas.fossati@linaro.org
 
 
    Henk Birkholz
