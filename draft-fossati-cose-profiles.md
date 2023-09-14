@@ -26,8 +26,8 @@ venue:
 author:
  -
     fullname: Thomas Fossati
-    organization: Arm Limited
-    email: thomas.fossati@arm.com
+    organization: Linaro
+    email: thomas.fossati@linaro.org
  -
     fullname: Henk Birkholz
     organization: Fraunhofer SIT
