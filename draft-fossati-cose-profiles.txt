@@ -5,8 +5,10 @@
 CBOR Object Signing and Encryption                            T. Fossati
 Internet-Draft                                               Arm Limited
 Intended status: Standards Track                             H. Birkholz
-Expires: 14 September 2023                                Fraunhofer SIT
-                                                           13 March 2023
+Expires: 17 March 2024                                    Fraunhofer SIT
+                                                               O. Steele
+                                                               Transmute
+                                                       14 September 2023
 
 
                              COSE Profiles
@@ -55,7 +57,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 14 September 2023.
+   This Internet-Draft will expire on 17 March 2024.
 
 Copyright Notice
 
@@ -281,9 +283,9 @@ Table of Contents
    [I-D.ietf-core-href]
               Bormann, C. and H. Birkholz, "Constrained Resource
               Identifiers", Work in Progress, Internet-Draft, draft-
-              ietf-core-href-12, 6 March 2023,
+              ietf-core-href-13, 10 July 2023,
               <https://datatracker.ietf.org/doc/html/draft-ietf-core-
-              href-12>.
+              href-13>.
 
    [I-D.ietf-sacm-coswid]
               Birkholz, H., Fitzgerald-McKay, J., Schmidt, C., and D.
@@ -294,7 +296,7 @@ Table of Contents
 
    [IANA.cose]
               IANA, "CBOR Object Signing and Encryption (COSE)",
-              <https://www.iana.org/assignments/cose>.
+              <http://www.iana.org/assignments/cose>.
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -367,3 +369,8 @@ Authors' Addresses
    Henk Birkholz
    Fraunhofer SIT
    Email: henk.birkholz@sit.fraunhofer.de
+
+
+   Orie Steele
+   Transmute
+   Email: orie@transmute.industries
